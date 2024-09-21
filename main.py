@@ -47,7 +47,7 @@ class Laser:
         return collide(self, obj)
 
 
-
+# class for the ship the user controls 
 class Ship:
 
     COOLDOWN = 30
@@ -126,7 +126,7 @@ class Player(Ship):
         super().draw(window)
         self.healthbar(window)
 
-
+# class for enemy ships that come down from the top of the screen
 class Enemy(Ship):
     COLOR_MAP = {
         "red": (RED_SPACE_SHIP, RED_LASER),
@@ -251,7 +251,7 @@ def main():
 
 
         player.move_lasers(-laser_vel - 3, enemies)
-
+# main function that runs the entire game through different classes and function calls
 def main_menu():
     title_font = pygame.font.SysFont("comicsans", 70)
     run = True
